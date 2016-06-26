@@ -1,5 +1,5 @@
 # CoinSmash - Android Game 
-![alt tag](https://github.com/CoinSmash/Game/blob/master/CoinSmash/app/src/main/res/mipmap-mdpi/ic_launcher.png)
+![alt tag](https://github.com/Linear777/CoinSmash/blob/master/Game/CoinSmash/app/src/main/res/mipmap-xhdpi/ic_launcher.png)
 
 ## Game plan ##
 
