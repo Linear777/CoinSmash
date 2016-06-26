@@ -1,0 +1,14 @@
+attribute vec4 vPosition;
+attribute vec2 texturePosition;
+
+varying vec2 tPosition;
+
+uniform mat4 mMVPMatrix;
+
+void main()
+{
+    gl_Position = mMVPMatrix * vPosition;
+    tPosition = texturePosition;
+}
+
+

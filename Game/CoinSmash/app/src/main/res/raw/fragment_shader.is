@@ -1,0 +1,34 @@
+precision mediump float;
+
+varying vec2 tPosition;
+uniform vec4 vColor;
+
+<<<<<<< HEAD
+uniform float time;
+
+=======
+>>>>>>> refs/heads/Linear777
+uniform sampler2D button_texture;
+
+void main()
+{
+    vec4 color = texture2D(button_texture,tPosition);
+    float sum = (color.r + color.b + color.g)*0.3;
+<<<<<<< HEAD
+
+=======
+>>>>>>> refs/heads/Linear777
+    if(sum > 0.5)
+    {
+        discard;
+    }
+
+<<<<<<< HEAD
+    color *= abs(sin(time));
+=======
+>>>>>>> refs/heads/Linear777
+
+    gl_FragColor = color;
+}
+
+
