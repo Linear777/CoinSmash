@@ -24,12 +24,6 @@ public class Mesh
     void LoadMesh(String Source)
     {
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-       // IgniaConverters.
->>>>>>> refs/remotes/origin/master
->>>>>>> refs/heads/Linear777
+
     }
 }

@@ -1,54 +1,43 @@
 package com.example.imothep.coinsmash.Elements;
 
-<<<<<<< HEAD
+
 import android.opengl.Matrix;
 
 import com.example.imothep.coinsmash.Physics.PhyCollision.Collision3D.Collider;
 
 import java.util.ArrayList;
-=======
 import com.example.imothep.coinsmash.Physics.PhyCollision.Collision3D.Collider;
 
 import java.util.List;
->>>>>>> refs/heads/Linear777
 
 /**
  * Created by Imothep on 02.05.2016.
  */
-<<<<<<< HEAD
 public class Menu implements Element
 {
-    String menu_title;
-    ArrayList<Button> btns;
-=======
-public class Menu
-{
+
     String menu_title;
     List<Button> btns;
->>>>>>> refs/heads/Linear777
     Collider collision_testing;
 
     public Menu(String menu_title)
     {
         this.menu_title = menu_title;
-<<<<<<< HEAD
         btns = new ArrayList<Button>();
 
     }
 
     @Override
     public void Draw(float []MVP)
-=======
+    {
 
     }
 
-    public void DrawMenu()
->>>>>>> refs/heads/Linear777
+    public void DrawMenu(float []MVP)
     {
         //Drawing buttons
         for (Button button : btns)
         {
-<<<<<<< HEAD
            button.Draw(MVP);
         }
     }
@@ -79,9 +68,7 @@ public class Menu
 
             //Preprocessing our collision coordinates
             btn.polygonial.PreprocessBoundary(mFinalMatrix, width, height);
-=======
-           button.Draw();
->>>>>>> refs/heads/Linear777
+            btn.Draw();
         }
     }
 

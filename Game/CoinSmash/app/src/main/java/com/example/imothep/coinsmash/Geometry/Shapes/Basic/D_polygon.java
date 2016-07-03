@@ -8,6 +8,8 @@ import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.util.Log;
 
+import com.example.imothep.coinsmash.IgniaFormats.Assets.Assets;
+import com.example.imothep.coinsmash.IgniaFormats.AssetsLoader;
 import com.example.imothep.coinsmash.Main_Init;
 import com.example.imothep.coinsmash.R;
 
@@ -24,10 +26,7 @@ import java.util.Vector;
 
 public class D_polygon extends Geometry
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/heads/Linear777
     class Vector3
     {
         public float x = 0;
@@ -35,10 +34,6 @@ public class D_polygon extends Geometry
         public float z = 0;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/heads/Linear777
     public String name;
     public FloatBuffer vertices;
     public ShortBuffer indices;
@@ -75,7 +70,6 @@ public class D_polygon extends Geometry
         Initialize();
 
         transformation = new Transformation();
-<<<<<<< HEAD
     }
 
 
@@ -107,8 +101,6 @@ public class D_polygon extends Geometry
         GLES20.glDisableVertexAttribArray(texture_pos);
         GLES20.glDisableVertexAttribArray(vertex_pos);
 
-=======
->>>>>>> refs/heads/Linear777
     }
 
     @Override
@@ -136,13 +128,10 @@ public class D_polygon extends Geometry
         vertices.position(0);
         textCoords.position(0);
 
-<<<<<<< HEAD
         textures = new int[10];
-=======
         textures = new int[1];
->>>>>>> refs/heads/Linear777
-
-        Bitmap button = BitmapFactory.decodeResource(Main_Init.resources, R.drawable.button_experimental);
+        Assets.button= AssetsLoader.load_texture(1);
+        Bitmap button = Assets.button;
 
         GLES10.glGenTextures(1, textures, 0);
         GLES10.glBindTexture(GLES10.GL_TEXTURE_2D, textures[0]);
@@ -157,10 +146,6 @@ public class D_polygon extends Geometry
 
         GLES10.glBindTexture(GLES10.GL_TEXTURE_2D,0);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/heads/Linear777
         for(int i = 0;i<4;i++)
         {
             boundary[i] = new Vector3();

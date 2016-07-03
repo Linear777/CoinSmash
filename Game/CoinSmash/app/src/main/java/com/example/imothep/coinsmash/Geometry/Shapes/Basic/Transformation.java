@@ -47,8 +47,5 @@ public class Transformation
     public void rotateByQuaternion()
     {
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/heads/Linear777
 }

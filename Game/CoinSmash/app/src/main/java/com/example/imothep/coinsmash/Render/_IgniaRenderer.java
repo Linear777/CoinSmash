@@ -5,7 +5,6 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
-<<<<<<< HEAD
 import android.os.SystemClock;
 
 import com.example.imothep.coinsmash.BehaviorState.MenuState;
@@ -14,11 +13,9 @@ import com.example.imothep.coinsmash.Effect.ButtonClick;
 import com.example.imothep.coinsmash.Effect.EffectClass;
 import com.example.imothep.coinsmash.Elements.Button;
 import com.example.imothep.coinsmash.Elements.Menu;
-=======
 import android.util.Log;
 
 import com.example.imothep.coinsmash.Geometry.Shapes.Basic.D_polygon;
->>>>>>> refs/heads/Linear777
 import com.example.imothep.coinsmash.R;
 import com.example.imothep.coinsmash.Render.Shader._IgniaShader;
 
@@ -32,20 +29,17 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class _IgniaRenderer implements GLSurfaceView.Renderer
 {
-<<<<<<< HEAD
     public Button[] buttons;
     public Menu MainMenu;
     public Vein renderState;
 
-    public int width,height;
+   // public int width,height;
 
     public static float time;
-=======
     public D_polygon[] button;
 
     public int width,height;
 
->>>>>>> refs/heads/Linear777
 
     private final float[] mFinalMatrix = new float[16];
     private final float[] mMVPMatrix = new float[16];
@@ -73,7 +67,6 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
 
         int effect_shader = _IgniaShader.shader_program;
 
-<<<<<<< HEAD
 
         _IgniaShader.addProgram();
         _IgniaShader.LoadShader(R.raw.vertex_shader, GLES20.GL_VERTEX_SHADER);
@@ -87,7 +80,7 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
         GLES20.glCullFace(GLES20.GL_BACK);
 
 
-        MainMenu = new Menu("Main Menu");
+        MainMenu = new Menu("main menu");
         buttons = new Button[4];
 
         String[] labels = new String[]{"Single Player","Multi Player","Options","Exit"};
@@ -112,17 +105,12 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
         MainMenu.getBtn(0).effect.setGLES_Program(btn_shader);
 
 
-
-
-
         MenuState menuGlass = new MenuState();
         menuGlass.setElement(MainMenu);
 
         renderState = menuGlass;
 
-=======
         GLES20.glEnable(GLES20.GL_CULL_FACE);
-<<<<<<< HEAD
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
         GLES20.glCullFace(GLES20.GL_BACK);
 
@@ -138,12 +126,10 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
         button[1].name = "Multi Player";
         button[2].name = "Options";
         button[3].name = "Exit";
-=======
         GLES20.glCullFace(GLES20.GL_BACK);
 
-        button = new D_polygon();
->>>>>>> refs/remotes/origin/master
->>>>>>> refs/heads/Linear777
+       // button = new D_polygon();
+
     }
 
     @Override
@@ -160,11 +146,9 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
         Matrix.setIdentityM(mFinalMatrix,0);
 
         Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
-<<<<<<< HEAD
 
         /*Initialize preprocessing of menu items*/
         MainMenu.Preprocess(width,height,mMVPMatrix,mProjectionMatrix,mViewMatrix);
-=======
 
         /*Initialize preprocessing of menu items*/
 
@@ -178,13 +162,11 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
             btn.PreprocessBoundary(mFinalMatrix,width,height);
         }
 
->>>>>>> refs/heads/Linear777
     }
 
     @Override
     public void onDrawFrame(GL10 gl)
     {
-<<<<<<< HEAD
         long t1 = SystemClock.uptimeMillis();
 
         //Camera view matrix
@@ -197,7 +179,6 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
         renderState.Draw(mMVPMatrix);
 
         time = (float)( SystemClock.uptimeMillis() - t1) / 100;
-=======
         //Camera view matrix
         Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
 
@@ -237,6 +218,5 @@ public class _IgniaRenderer implements GLSurfaceView.Renderer
             GLES20.glDrawElements(GLES20.GL_TRIANGLES, 6, GLES20.GL_UNSIGNED_SHORT, button[0].indices);
         }
         GLES20.glDisableVertexAttribArray(vertex_pos);
->>>>>>> refs/heads/Linear777
     }
 }

@@ -5,15 +5,12 @@ import android.opengl.GLSurfaceView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-<<<<<<< HEAD
 
 import com.example.imothep.coinsmash.Elements.Button;
-=======
 import android.widget.Toast;
 
 import com.example.imothep.coinsmash.Elements.Button;
 import com.example.imothep.coinsmash.Geometry.Shapes.Basic.D_polygon;
->>>>>>> refs/heads/Linear777
 
 /**
  * Created by Imothep on 21.04.2016.
@@ -52,19 +49,18 @@ public class _IgniaSurfaceGlass extends GLSurfaceView implements View.OnTouchLis
 
                                 Log.e("Clicked","WAITING");
 
-<<<<<<< HEAD
                                 for(Button btn : renderer.buttons)
                                 {
-                                        if(btn.polygonial.CheckCollision(x,y) == true)
-                                        {
-                                                btn.effect.getAnimation().Reset();
-=======
+                                    if (btn.polygonial.CheckCollision(x, y) == true)
+                                    {
+                                        btn.effect.getAnimation().Reset();
+                                    }
+                                }
                                 for(D_polygon btn : renderer.button)
                                 {
                                         if(btn.CheckCollision(x,y) == true)
                                         {
                                                 Toast.makeText(context, btn.name, Toast.LENGTH_SHORT).show();
->>>>>>> refs/heads/Linear777
                                                 break;
                                         }
                                 }
